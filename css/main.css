@@ -9,9 +9,9 @@
 }
 
 html {
-  height: 100vh;
-  background: linear-gradient(to bottom, #f1f2b5, #135058);
+  background: #f1f2b5;
 }
+
 body {
   margin: 0;
   padding: 0;
@@ -19,14 +19,14 @@ body {
   color: #193549;
   font-family: 'helvetica neue', sans-serif;
   font-weight: bold;
-  font-size: 20px;
+  font-size: 16px;
 }
 
 .title {
-  font-size: 36px;
+  font-size: 24px;
   border-bottom: #135058 3px solid;
   padding-bottom: 20px;
-  margin-bottom: 60px;
+  margin-bottom: 20px;
 }
 
 .grid {
@@ -39,21 +39,24 @@ body {
 }
 
 input {
-  width: 200px;
-  margin: 30px;
+  width: 180px;
+  margin: 15px 35px 15px 0;
 }
-
+.img-container {
+  width: 100%;
+}
 img {
   width: var(--width);
   padding: var(--spacing);
   background: var(--base);
   filter: blur(var(--blur));
   border-radius: var(--radius);
+  margin: 20px 0;
 }
 
 .btn {
   cursor: pointer;
-  color: #193549;
+  color: #135058;
   width: 100px;
   height: 40px;
   border-radius: 10px;
@@ -61,7 +64,8 @@ img {
   background-color: #f1f2b5;
   transition: all 0.4s ease;
   font-size: 18px;
-  margin: 30px;
+  margin: 20px;
+  align-self: center;
 }
 .btn:hover {
   color: #f1f2b5;
@@ -72,7 +76,7 @@ img {
 .btn-share {
   height: 40px;
   bottom: 20px;
-  margin: 10px;
+  margin: 20px;
   border: 3px #135058 solid;
   border-radius: 10px;
   background: #f1f2b5;
@@ -101,6 +105,16 @@ img {
     height: 100vh;
     background: linear-gradient(to bottom, #f1f2b5, #135058);
   }
+  body {
+    font-size: 20px;
+  }
+
+  .title {
+    font-size: 36px;
+    padding-bottom: 20px;
+    margin-bottom: 60px;
+  }
+
   input {
     width: 85px;
   }
@@ -114,11 +128,6 @@ img {
     grid-template-rows: 60px 60px 60px 60px 60px 50px 50px 60px;
   }
   img {
-    width: var(--width);
-    padding: var(--spacing);
-    background: var(--base);
-    filter: blur(var(--blur));
-    border-radius: var(--radius);
     grid-column: 2 / 3;
     justify-self: center;
   }
@@ -150,6 +159,7 @@ img {
     margin-left: 10px;
   }
   .btn {
+    color: #193549;
     grid-row: 8 / 9;
   }
 
