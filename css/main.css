@@ -11,7 +11,6 @@
 html {
   background: #f1f2b5;
 }
-
 body {
   margin: 0;
   padding: 0;
@@ -30,9 +29,6 @@ body {
 }
 
 .grid {
-  max-width: 1024px;
-  margin-bottom: 50px;
-  margin: auto;
   display: flex;
   flex-wrap: wrap;
   justify-content: center;
@@ -42,6 +38,7 @@ input {
   width: 180px;
   margin: 15px 35px 15px 0;
 }
+
 .img-container {
   width: 100%;
 }
@@ -82,7 +79,6 @@ img {
   background: #f1f2b5;
   transition: all 0.4s ease;
 }
-
 .btn-share:hover {
   border: 3px #f1f2b5 solid;
   box-shadow: 0 0 1rem #f1f2b5;
@@ -100,7 +96,7 @@ img {
 }
 
 /* TABLET */
-@media all and (min-width: 840px) {
+@media (min-width: 795px) {
   html {
     height: 100vh;
     background: linear-gradient(to bottom, #f1f2b5, #135058);
@@ -125,15 +121,19 @@ img {
     margin: auto;
     display: grid;
     grid-template-columns: 1fr 1.8fr;
-    grid-template-rows: 60px 60px 60px 60px 60px 50px 50px 60px;
+    grid-template-rows: 60px 60px 60px 60px 60px 50px 50px 40px;
   }
+
   img {
     grid-column: 2 / 3;
     justify-self: center;
+    margin: 0;
   }
+
   label {
     grid-column: 1 / 2;
   }
+
   .width {
     grid-row: 1 / 2;
   }
@@ -158,11 +158,12 @@ img {
     justify-self: start;
     margin-left: 10px;
   }
+
   .btn {
     color: #193549;
+    grid-column: 1 / 2;
     grid-row: 8 / 9;
   }
-
   .btn-share {
     position: absolute;
   }
