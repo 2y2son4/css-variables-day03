@@ -29,11 +29,6 @@ body {
   margin-bottom: 60px;
 }
 
-.controls {
-  margin-bottom: 50px;
-  grid-row: 1 / 6;
-}
-
 .grid {
   max-width: 1024px;
   margin-bottom: 50px;
@@ -47,10 +42,6 @@ input {
   width: 80px;
 }
 
-label {
-  grid-column: 1 / 2;
-}
-
 img {
   width: var(--width);
   padding: var(--spacing);
@@ -58,8 +49,11 @@ img {
   filter: blur(var(--blur));
   border-radius: var(--radius);
   grid-column: 2 / 3;
+  justify-self: center;
 }
-
+label {
+  grid-column: 1 / 2;
+}
 .width {
   grid-row: 1 / 2;
 }
@@ -82,7 +76,7 @@ img {
 .base,
 .btn {
   justify-self: start;
-  margin-left: 50px;
+  margin-left: 10px;
 }
 
 .btn {
@@ -107,10 +101,10 @@ img {
   height: 40px;
   position: absolute;
   bottom: 20px;
-  border: none;
-  box-shadow: 0 0 1px 3px #135058, 0 0 0 3px rgb(19, 16, 16), 0 0 10px #002d3a, 0 0 10px rgba(0, 84, 107, 0.075);
+  border: 3px #135058 solid;
   border-radius: 10px;
   background: #f1f2b5;
+  transition: all 0.4s ease;
 }
 
 .btn-share:hover {
@@ -127,7 +121,7 @@ img {
 .link {
   text-decoration: none;
   font-size: 18px;
-  padding: 5px;
+  padding: 10px;
   color: #135058;
 }
 .link:hover {
