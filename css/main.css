@@ -33,13 +33,14 @@ body {
   max-width: 1024px;
   margin-bottom: 50px;
   margin: auto;
-  display: grid;
-  grid-template-columns: 1fr 1.8fr;
-  grid-template-rows: 60px 60px 60px 60px 60px 50px 50px 60px;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
 }
 
 input {
-  width: 80px;
+  width: 200px;
+  margin: 30px;
 }
 
 img {
@@ -48,41 +49,11 @@ img {
   background: var(--base);
   filter: blur(var(--blur));
   border-radius: var(--radius);
-  grid-column: 2 / 3;
-  justify-self: center;
-}
-label {
-  grid-column: 1 / 2;
-}
-.width {
-  grid-row: 1 / 2;
-}
-.spacing {
-  grid-row: 2 / 3;
-}
-.radius {
-  grid-row: 3 / 4;
-}
-.blur {
-  grid-row: 4 / 5;
-}
-.base {
-  grid-row: 5 / 6;
-}
-.width,
-.spacing,
-.radius,
-.blur,
-.base,
-.btn {
-  justify-self: start;
-  margin-left: 10px;
 }
 
 .btn {
   cursor: pointer;
   color: #193549;
-  grid-row: 8 / 9;
   width: 100px;
   height: 40px;
   border-radius: 10px;
@@ -90,6 +61,7 @@ label {
   background-color: #f1f2b5;
   transition: all 0.4s ease;
   font-size: 18px;
+  margin: 30px;
 }
 .btn:hover {
   color: #f1f2b5;
@@ -99,8 +71,8 @@ label {
 
 .btn-share {
   height: 40px;
-  position: absolute;
   bottom: 20px;
+  margin: 10px;
   border: 3px #135058 solid;
   border-radius: 10px;
   background: #f1f2b5;
@@ -112,12 +84,7 @@ label {
   box-shadow: 0 0 1rem #f1f2b5;
   background: #135058;
 }
-.btn1 {
-  left: 30%;
-}
-.btn2 {
-  right: 30%;
-}
+
 .link {
   text-decoration: none;
   font-size: 18px;
@@ -126,4 +93,73 @@ label {
 }
 .link:hover {
   color: #f1f2b5;
+}
+
+/* TABLET */
+@media all and (min-width: 840px) {
+  html {
+    height: 100vh;
+    background: linear-gradient(to bottom, #f1f2b5, #135058);
+  }
+  input {
+    width: 85px;
+  }
+
+  .grid {
+    max-width: 1024px;
+    margin-bottom: 50px;
+    margin: auto;
+    display: grid;
+    grid-template-columns: 1fr 1.8fr;
+    grid-template-rows: 60px 60px 60px 60px 60px 50px 50px 60px;
+  }
+  img {
+    width: var(--width);
+    padding: var(--spacing);
+    background: var(--base);
+    filter: blur(var(--blur));
+    border-radius: var(--radius);
+    grid-column: 2 / 3;
+    justify-self: center;
+  }
+  label {
+    grid-column: 1 / 2;
+  }
+  .width {
+    grid-row: 1 / 2;
+  }
+  .spacing {
+    grid-row: 2 / 3;
+  }
+  .radius {
+    grid-row: 3 / 4;
+  }
+  .blur {
+    grid-row: 4 / 5;
+  }
+  .base {
+    grid-row: 5 / 6;
+  }
+  .width,
+  .spacing,
+  .radius,
+  .blur,
+  .base,
+  .btn {
+    justify-self: start;
+    margin-left: 10px;
+  }
+  .btn {
+    grid-row: 8 / 9;
+  }
+
+  .btn-share {
+    position: absolute;
+  }
+  .btn1 {
+    left: 30%;
+  }
+  .btn2 {
+    right: 30%;
+  }
 }
